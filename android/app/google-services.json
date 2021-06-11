@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "347153889508",
+    "project_id": "journal-todo",
+    "storage_bucket": "journal-todo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:347153889508:android:c7d7b6af22635dba0354f1",
+        "android_client_info": {
+          "package_name": "com.example.journal_todo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "347153889508-bc14lh3uv0c6te5q45l2nl6gmb2jeoqe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCe4MomX3_waSOXXklARWFjpFPgH0xCyso"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "347153889508-bc14lh3uv0c6te5q45l2nl6gmb2jeoqe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
