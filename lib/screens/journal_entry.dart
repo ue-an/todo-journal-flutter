@@ -60,7 +60,7 @@ class _JEntryScreenState extends State<JEntryScreen> {
       ),
       body: Padding(
         padding: EdgeInsets.symmetric(vertical: 18.0, horizontal: 12.0),
-        child: ListView(
+        child: Column(
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -70,7 +70,25 @@ class _JEntryScreenState extends State<JEntryScreen> {
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
-                    color: Theme.of(context).primaryColor,
+                    color: Colors.white,
+                    shadows: [
+                      Shadow(
+                        // bottomLeft
+                        offset: Offset(-1, -1),
+                      ),
+                      Shadow(
+                        // bottomRight
+                        offset: Offset(1, -1),
+                      ),
+                      Shadow(
+                        // topRight
+                        offset: Offset(1, 1),
+                      ),
+                      Shadow(
+                        // topLeft
+                        offset: Offset(-1, 1),
+                      ),
+                    ],
                   ),
                 ),
               ],
@@ -82,12 +100,25 @@ class _JEntryScreenState extends State<JEntryScreen> {
               decoration: InputDecoration(
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(15.0),
+                  borderSide: BorderSide(
+                    color: Colors.cyan,
+                  ),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(15.0),
+                  borderSide: BorderSide(
+                    color: Colors.cyan,
+                  ),
                 ),
                 contentPadding: EdgeInsets.symmetric(
                   vertical: 10.0,
                   horizontal: 20.0,
                 ),
                 labelText: 'Daily Journal Entry',
+                labelStyle: TextStyle(color: Colors.cyan),
+              ),
+              style: TextStyle(
+                color: Colors.white,
               ),
               maxLines: 12,
               minLines: 10,

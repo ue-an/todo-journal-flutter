@@ -19,6 +19,7 @@ class MyThemes {
     accentColor: Colors.cyan[600],
     primaryColor: Colors.cyan[800],
     textTheme: GoogleFonts.patrickHandTextTheme(),
+    cardColor: Colors.white70,
   );
 
   static final lightTheme = ThemeData(

@@ -13,16 +13,13 @@ class TaskScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final taskProvider = Provider.of<TEntryProvider>(context);
     return Scaffold(
-      //backgroundColor: Theme.of(context).accentColor,
       body: Column(
         children: [
           TopBar(),
           Expanded(
             child: Container(
               padding: EdgeInsets.all(20.0),
-              decoration: BoxDecoration(
-                  //color: Theme.of(context).accentColor,
-                  ),
+              decoration: BoxDecoration(),
               child: StreamBuilder<List<Task>>(
                 stream: taskProvider.tasks,
                 builder: (context, snapshot) {
@@ -39,7 +36,7 @@ class TaskScreen extends StatelessWidget {
                           ),
                           trailing: IconButton(
                             icon: Icon(Icons.check_box_outlined),
-                            color: Theme.of(context).primaryColor,
+                            color: Theme.of(context).accentColor,
                             onPressed: () {
                               showDialog(
                                 context: context,
