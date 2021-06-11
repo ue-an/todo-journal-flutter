@@ -12,11 +12,8 @@ class TaskScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final taskProvider = Provider.of<TEntryProvider>(context);
-    // return Center(
-    //   child: Text('Tasks'),
-    // );
     return Scaffold(
-      backgroundColor: Theme.of(context).accentColor,
+      //backgroundColor: Theme.of(context).accentColor,
       body: Column(
         children: [
           TopBar(),
@@ -24,8 +21,8 @@ class TaskScreen extends StatelessWidget {
             child: Container(
               padding: EdgeInsets.all(20.0),
               decoration: BoxDecoration(
-                color: Theme.of(context).accentColor,
-              ),
+                  //color: Theme.of(context).accentColor,
+                  ),
               child: StreamBuilder<List<Task>>(
                 stream: taskProvider.tasks,
                 builder: (context, snapshot) {
@@ -156,7 +153,6 @@ class TaskScreen extends StatelessWidget {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.cyan[900],
         child: Icon(
           Icons.add,
           color: Colors.white,
@@ -287,8 +283,7 @@ class TopBar extends StatelessWidget {
       margin: EdgeInsets.symmetric(vertical: 12, horizontal: 3),
       height: 100,
       decoration: BoxDecoration(
-        //color: Colors.white,
-        color: Colors.cyan[900],
+        color: Theme.of(context).accentColor,
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(20),
           bottomRight: Radius.circular(20),

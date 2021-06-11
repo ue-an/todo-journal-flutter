@@ -27,7 +27,6 @@ class JournalScreen extends StatelessWidget {
     });
 
     return Scaffold(
-      backgroundColor: Theme.of(context).accentColor,
       body: //Text('Journal Home'),
           Column(
         children: [
@@ -35,9 +34,7 @@ class JournalScreen extends StatelessWidget {
           Expanded(
             child: Container(
               padding: EdgeInsets.all(15.0),
-              decoration: BoxDecoration(
-                color: Theme.of(context).accentColor,
-              ),
+              decoration: BoxDecoration(),
               child: StreamBuilder<List<Entry>>(
                 stream: entryProvider.entries,
                 builder: (context, snapshot) {
@@ -99,7 +96,6 @@ class JournalScreen extends StatelessWidget {
       floatingActionButton: Visibility(
         visible: _isVisible,
         child: FloatingActionButton(
-          backgroundColor: Colors.cyan[900],
           child: Icon(
             Icons.add,
             color: Colors.white,
@@ -120,7 +116,7 @@ class TopBarJhome extends StatelessWidget {
       margin: EdgeInsets.symmetric(vertical: 12, horizontal: 3),
       height: 100,
       decoration: BoxDecoration(
-        color: Colors.cyan[900],
+        color: Theme.of(context).accentColor,
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(20),
           bottomRight: Radius.circular(20),

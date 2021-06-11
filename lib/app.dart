@@ -29,48 +29,54 @@ class _AppState extends State<App> {
   }
 
   @override
-  Widget build(BuildContext context) {
-    return MultiProvider(
-      providers: [
-        ChangeNotifierProvider(create: (_) => JEntryProvider()),
-        ChangeNotifierProvider(create: (_) => TEntryProvider()),
-        ChangeNotifierProvider(create: (_) => ThemeProvider()),
-      ],
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        routes: Routes.routes,
-        home: Scaffold(
-          appBar: AppBar(
-            title: Text('Todo Plus Journal App'),
-            actions: [
-              ChangeThemeSwitch(),
-            ],
-          ),
-          drawer: SafeArea(
-            child: CustomDrawer(),
-          ),
-          body: _widgetOptions.elementAt(_selectedIndex),
-          bottomNavigationBar: BottomNavigationBar(
-            items: [
-              BottomNavigationBarItem(
-                icon: Icon(Icons.playlist_add_check),
-                label: 'Tasks',
+  Widget build(BuildContext context) => MultiProvider(
+        providers: [
+          ChangeNotifierProvider(create: (_) => JEntryProvider()),
+          ChangeNotifierProvider(create: (_) => TEntryProvider()),
+          ChangeNotifierProvider(create: (_) => ThemeProvider()),
+        ],
+        builder: (context, _) {
+          final themeProvider = Provider.of<ThemeProvider>(context);
+
+          return MaterialApp(
+            debugShowCheckedModeBanner: false,
+            routes: Routes.routes,
+            home: Scaffold(
+              appBar: AppBar(
+                title: Text('Todo Plus Journal App'),
+                actions: [
+                  ChangeThemeSwitch(),
+                ],
               ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.library_books),
-                label: 'Journal',
+              drawer: SafeArea(
+                child: CustomDrawer(),
               ),
-            ],
-            currentIndex: _selectedIndex,
-            onTap: onBottomTap,
-          ),
-        ),
-        theme: ThemeData(
-          accentColor: Colors.cyan[600],
-          primaryColor: Colors.cyan[800],
-          textTheme: GoogleFonts.patrickHandTextTheme(),
-        ),
-      ),
-    );
-  }
+              body: _widgetOptions.elementAt(_selectedIndex),
+              bottomNavigationBar: BottomNavigationBar(
+                items: [
+                  BottomNavigationBarItem(
+                    icon: Icon(Icons.playlist_add_check),
+                    label: 'Tasks',
+                  ),
+                  BottomNavigationBarItem(
+                    icon: Icon(Icons.library_books),
+                    label: 'Journal',
+                  ),
+                ],
+                currentIndex: _selectedIndex,
+                selectedItemColor: Colors.cyan[800],
+                onTap: onBottomTap,
+              ),
+            ),
+            // theme: ThemeData(
+            //   accentColor: Colors.cyan[600],
+            //   primaryColor: Colors.cyan[800],
+            //   textTheme: GoogleFonts.patrickHandTextTheme(),
+            // ),
+            theme: MyThemes.lightTheme,
+            darkTheme: MyThemes.darkTheme,
+            themeMode: themeProvider.themeMode,
+          );
+        },
+      );
 }
