@@ -6,6 +6,7 @@ import 'package:journal_todo/providers/theme_provider.dart';
 import 'package:journal_todo/screens/journal_home.dart';
 import 'package:journal_todo/screens/tasks_home.dart';
 import 'package:journal_todo/utils/change_theme_switch.dart';
+import 'package:journal_todo/utils/drawer.dart';
 import 'package:journal_todo/utils/routes.dart';
 import 'package:provider/provider.dart';
 
@@ -45,6 +46,9 @@ class _AppState extends State<App> {
               ChangeThemeSwitch(),
             ],
           ),
+          drawer: SafeArea(
+            child: CustomDrawer(),
+          ),
           body: _widgetOptions.elementAt(_selectedIndex),
           bottomNavigationBar: BottomNavigationBar(
             items: [
@@ -66,7 +70,6 @@ class _AppState extends State<App> {
           primaryColor: Colors.cyan[800],
           textTheme: GoogleFonts.patrickHandTextTheme(),
         ),
-        
       ),
     );
   }

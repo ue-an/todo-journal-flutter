@@ -7,6 +7,6 @@ class Routes {
   static const String jentry = '/jentry';
 
   static final routes = <String, WidgetBuilder>{
-    jentry: (BuildContext context) => JEntryScreen()
+    jentry: (BuildContext context) => JEntryScreen(),
   };
 }
