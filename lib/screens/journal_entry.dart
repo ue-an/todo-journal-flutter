@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:journal_todo/models/entry_model.dart';
 import 'package:journal_todo/providers/journal_provider.dart';
-import 'package:journal_todo/utils/routes.dart';
 import 'package:provider/provider.dart';
 
 class JEntryScreen extends StatefulWidget {
@@ -41,7 +40,6 @@ class _JEntryScreenState extends State<JEntryScreen> {
     final journalProvider = Provider.of<JEntryProvider>(context);
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).primaryColor,
         //title: Text('Journal Entry'),
         title: Text(formatDate(journalProvider.date, [MM, ' ', d, ', ', yyyy])),
         actions: [
@@ -98,16 +96,16 @@ class _JEntryScreenState extends State<JEntryScreen> {
             ),
             TextFormField(
               decoration: InputDecoration(
-                border: OutlineInputBorder(
+                enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(15.0),
                   borderSide: BorderSide(
-                    color: Colors.cyan,
+                    color: Colors.cyan[600],
                   ),
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(15.0),
                   borderSide: BorderSide(
-                    color: Colors.cyan,
+                    color: Colors.cyan[600],
                   ),
                 ),
                 contentPadding: EdgeInsets.symmetric(
@@ -115,10 +113,10 @@ class _JEntryScreenState extends State<JEntryScreen> {
                   horizontal: 20.0,
                 ),
                 labelText: 'Daily Journal Entry',
-                labelStyle: TextStyle(color: Colors.cyan),
+                labelStyle: TextStyle(color: Colors.cyan[600]),
               ),
               style: TextStyle(
-                color: Colors.white,
+                color: Colors.cyan[600],
               ),
               maxLines: 12,
               minLines: 10,

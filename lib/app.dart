@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:journal_todo/providers/journal_provider.dart';
 import 'package:journal_todo/providers/tasks_provider.dart';
 import 'package:journal_todo/providers/theme_provider.dart';

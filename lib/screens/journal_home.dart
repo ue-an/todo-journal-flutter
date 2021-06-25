@@ -113,16 +113,16 @@ class TopBarJhome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 12, horizontal: 3),
+      //margin: EdgeInsets.symmetric(vertical: 12, horizontal: 3),
       height: 100,
       decoration: BoxDecoration(
         color: Theme.of(context).accentColor,
-        borderRadius: BorderRadius.only(
-          bottomLeft: Radius.circular(20),
-          bottomRight: Radius.circular(20),
-          topLeft: Radius.circular(20),
-          topRight: Radius.circular(20),
-        ),
+        // borderRadius: BorderRadius.only(
+        //   bottomLeft: Radius.circular(20),
+        //   bottomRight: Radius.circular(20),
+        //   topLeft: Radius.circular(20),
+        //   topRight: Radius.circular(20),
+        // ),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,

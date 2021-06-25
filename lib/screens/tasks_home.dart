@@ -18,8 +18,8 @@ class TaskScreen extends StatelessWidget {
           TopBar(),
           Expanded(
             child: Container(
+              //color: Colors.white60,
               padding: EdgeInsets.all(20.0),
-              decoration: BoxDecoration(),
               child: StreamBuilder<List<Task>>(
                 stream: taskProvider.tasks,
                 builder: (context, snapshot) {
@@ -178,7 +178,32 @@ class TaskScreen extends StatelessWidget {
                     //         })
                     //   ],
                     // ),
-                    Text('ADD TASK'),
+                    Text(
+                      'ADD TASK',
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                        shadows: [
+                          Shadow(
+                            // bottomLeft
+                            offset: Offset(-1, -1),
+                          ),
+                          Shadow(
+                            // bottomRight
+                            offset: Offset(1, -1),
+                          ),
+                          Shadow(
+                            // topRight
+                            offset: Offset(1, 1),
+                          ),
+                          Shadow(
+                            // topLeft
+                            offset: Offset(-1, 1),
+                          ),
+                        ],
+                      ),
+                    ),
                     SizedBox(
                       height: 20.0,
                     ),
@@ -188,12 +213,22 @@ class TaskScreen extends StatelessWidget {
                           TextFormField(
                             controller: titleCtrl,
                             decoration: InputDecoration(
-                              border: OutlineInputBorder(
+                              enabledBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(15.0),
+                                borderSide: BorderSide(
+                                  color: Colors.cyan[600],
+                                ),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(15.0),
+                                borderSide: BorderSide(
+                                  color: Colors.cyan[600],
+                                ),
                               ),
                               contentPadding: EdgeInsets.symmetric(
                                   horizontal: 20.0, vertical: 10.0),
                               labelText: 'Title',
+                              labelStyle: TextStyle(color: Colors.cyan[600]),
                             ),
                             validator: (val) {
                               val = titleCtrl.text;
@@ -213,12 +248,22 @@ class TaskScreen extends StatelessWidget {
                             maxLines: 12,
                             minLines: 3,
                             decoration: InputDecoration(
-                              border: OutlineInputBorder(
+                              enabledBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(15.0),
+                                borderSide: BorderSide(
+                                  color: Colors.cyan[600],
+                                ),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(15.0),
+                                borderSide: BorderSide(
+                                  color: Colors.cyan[600],
+                                ),
                               ),
                               contentPadding: EdgeInsets.symmetric(
                                   horizontal: 20.0, vertical: 10.0),
                               labelText: 'Write Content',
+                              labelStyle: TextStyle(color: Colors.cyan[600]),
                             ),
                             validator: (val) {
                               contentCtrl.text = val;
@@ -277,16 +322,16 @@ class TopBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 12, horizontal: 3),
+      //margin: EdgeInsets.symmetric(vertical: 12, horizontal: 3),
       height: 100,
       decoration: BoxDecoration(
         color: Theme.of(context).accentColor,
-        borderRadius: BorderRadius.only(
-          bottomLeft: Radius.circular(20),
-          bottomRight: Radius.circular(20),
-          topRight: Radius.circular(20),
-          topLeft: Radius.circular(20),
-        ),
+        // borderRadius: BorderRadius.only(
+        //   bottomLeft: Radius.circular(20),
+        //   bottomRight: Radius.circular(20),
+        //   topRight: Radius.circular(20),
+        //   topLeft: Radius.circular(20),
+        // ),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,

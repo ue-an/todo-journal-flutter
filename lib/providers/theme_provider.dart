@@ -23,7 +23,7 @@ class MyThemes {
   );
 
   static final lightTheme = ThemeData(
-    scaffoldBackgroundColor: Colors.cyan[900],
+    scaffoldBackgroundColor: Colors.amber[100],
     colorScheme: ColorScheme.light(),
     accentColor: Colors.cyan[600],
     primaryColor: Colors.cyan[800],
