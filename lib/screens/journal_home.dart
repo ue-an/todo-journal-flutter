@@ -51,7 +51,7 @@ class JournalScreen extends StatelessWidget {
                           ),
                           trailing: IconButton(
                             icon: Icon(Icons.edit),
-                            color: Theme.of(context).accentColor,
+                            color: Colors.cyanAccent,
                             onPressed: () {
                               Navigator.of(context).push(
                                 MaterialPageRoute(

@@ -36,7 +36,7 @@ class TaskScreen extends StatelessWidget {
                           ),
                           trailing: IconButton(
                             icon: Icon(Icons.check_box_outlined),
-                            color: Theme.of(context).accentColor,
+                            color: Colors.cyanAccent,
                             onPressed: () {
                               showDialog(
                                 context: context,
