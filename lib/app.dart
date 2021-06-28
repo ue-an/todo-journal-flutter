@@ -52,6 +52,7 @@ class _AppState extends State<App> {
               ),
               body: _widgetOptions.elementAt(_selectedIndex),
               bottomNavigationBar: BottomNavigationBar(
+                //backgroundColor: Colors.cyan[800],
                 items: [
                   BottomNavigationBarItem(
                     icon: Icon(Icons.playlist_add_check),

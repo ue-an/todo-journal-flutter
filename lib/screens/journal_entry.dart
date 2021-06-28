@@ -135,6 +135,7 @@ class _JEntryScreenState extends State<JEntryScreen> {
                   ),
                   style: ElevatedButton.styleFrom(
                     primary: Colors.cyanAccent,
+                    onPrimary: Colors.black,
                   ),
                   onPressed: () {
                     journalProvider.saveEntry();
@@ -164,7 +165,12 @@ class _JEntryScreenState extends State<JEntryScreen> {
                                     ),
                                     child: Column(
                                       children: [
-                                        Text('Remove this from your journal?'),
+                                        Text(
+                                          'Remove this from your journal?',
+                                          style: TextStyle(
+                                            color: Colors.cyan,
+                                          ),
+                                        ),
                                         SizedBox(height: 30),
                                         Row(
                                           mainAxisAlignment:
@@ -187,8 +193,9 @@ class _JEntryScreenState extends State<JEntryScreen> {
                                               },
                                               child: Text('Yes'),
                                               style: ElevatedButton.styleFrom(
-                                                primary: Theme.of(context)
-                                                    .accentColor,
+                                                //primary: Theme.of(context).accentColor,
+                                                primary: Colors.cyanAccent,
+                                                onPrimary: Colors.black,
                                               ),
                                             ),
                                             ElevatedButton(
@@ -199,8 +206,8 @@ class _JEntryScreenState extends State<JEntryScreen> {
                                               },
                                               child: Text('No'),
                                               style: ElevatedButton.styleFrom(
-                                                primary: Theme.of(context)
-                                                    .accentColor,
+                                                primary: Colors.cyanAccent,
+                                                onPrimary: Colors.black,
                                               ),
                                             ),
                                           ],

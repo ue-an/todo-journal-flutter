@@ -37,7 +37,7 @@ class MyThemes {
     brightness: Brightness.light,
     primaryColorDark: Colors.white,
     appBarTheme: AppBarTheme(brightness: Brightness.light),
-    //canvasColor: Colors.white70,
+    canvasColor: Colors.cyan[800],
     scaffoldBackgroundColor: Colors.amber[100],
     //colorScheme: ColorScheme.light(),
 

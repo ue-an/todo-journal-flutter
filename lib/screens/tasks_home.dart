@@ -53,7 +53,10 @@ class TaskScreen extends StatelessWidget {
                                         child: Column(
                                           children: [
                                             Text(
-                                                'Are you really done with this task?'),
+                                              'Are you really done with this task?',
+                                              style:
+                                                  TextStyle(color: Colors.cyan),
+                                            ),
                                             SizedBox(height: 30),
                                             Row(
                                               mainAxisAlignment:
@@ -76,8 +79,8 @@ class TaskScreen extends StatelessWidget {
                                                   child: Text('Yes'),
                                                   style:
                                                       ElevatedButton.styleFrom(
-                                                    primary: Theme.of(context)
-                                                        .accentColor,
+                                                    primary: Colors.cyanAccent,
+                                                    onPrimary: Colors.black,
                                                   ),
                                                 ),
                                                 ElevatedButton(
@@ -89,8 +92,8 @@ class TaskScreen extends StatelessWidget {
                                                   child: Text('No'),
                                                   style:
                                                       ElevatedButton.styleFrom(
-                                                    primary: Theme.of(context)
-                                                        .accentColor,
+                                                    primary: Colors.cyanAccent,
+                                                    onPrimary: Colors.black,
                                                   ),
                                                 ),
                                               ],
@@ -216,19 +219,21 @@ class TaskScreen extends StatelessWidget {
                               enabledBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(15.0),
                                 borderSide: BorderSide(
-                                  color: Colors.cyan[600],
+                                  color: Colors.white,
                                 ),
                               ),
                               focusedBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(15.0),
                                 borderSide: BorderSide(
-                                  color: Colors.cyan[600],
+                                  color: Colors.white,
                                 ),
                               ),
                               contentPadding: EdgeInsets.symmetric(
                                   horizontal: 20.0, vertical: 10.0),
                               labelText: 'Title',
-                              labelStyle: TextStyle(color: Colors.cyan[600]),
+                              labelStyle: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold),
                             ),
                             style: TextStyle(color: Colors.cyan),
                             validator: (val) {
@@ -252,19 +257,21 @@ class TaskScreen extends StatelessWidget {
                               enabledBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(15.0),
                                 borderSide: BorderSide(
-                                  color: Colors.cyan[600],
+                                  color: Colors.white,
                                 ),
                               ),
                               focusedBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(15.0),
                                 borderSide: BorderSide(
-                                  color: Colors.cyan[600],
+                                  color: Colors.white,
                                 ),
                               ),
                               contentPadding: EdgeInsets.symmetric(
                                   horizontal: 20.0, vertical: 10.0),
                               labelText: 'Write Content',
-                              labelStyle: TextStyle(color: Colors.cyan[600]),
+                              labelStyle: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold),
                             ),
                             style: TextStyle(color: Colors.cyan),
                             validator: (val) {
@@ -287,6 +294,7 @@ class TaskScreen extends StatelessWidget {
                                 child: Text('Save'),
                                 style: ElevatedButton.styleFrom(
                                   primary: Colors.cyanAccent,
+                                  onPrimary: Colors.black,
                                 ),
                                 onPressed: () {
                                   context.read<TEntryProvider>().saveTask();
@@ -299,6 +307,7 @@ class TaskScreen extends StatelessWidget {
                                 child: Text('Cancel'),
                                 style: ElevatedButton.styleFrom(
                                   primary: Colors.cyanAccent,
+                                  onPrimary: Colors.black,
                                 ),
                                 onPressed: () {
                                   Navigator.of(context).pop();

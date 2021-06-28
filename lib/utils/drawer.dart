@@ -23,7 +23,7 @@ class CustomDrawer extends StatelessWidget {
                   style: TextStyle(
                     fontWeight: FontWeight.w600,
                     fontSize: 16.0,
-                    color: Colors.grey[600],
+                    color: Colors.white,
                   ),
                 ),
                 ChangeThemeSwitch(),
@@ -55,7 +55,7 @@ class CustomDrawer extends StatelessWidget {
     String text,
     IconData icon,
   }) {
-    final color = Colors.grey[600];
+    final color = Colors.white;
     final hoverColor = Colors.cyan;
 
     return ListTile(
