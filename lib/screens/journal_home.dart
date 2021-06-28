@@ -49,19 +49,19 @@ class JournalScreen extends StatelessWidget {
                                 DateTime.parse(snapshot.data[index].date),
                                 [MM, ' ', d, ' ,', yyyy]),
                           ),
-                          trailing: Icon(
-                            Icons.edit,
+                          trailing: IconButton(
+                            icon: Icon(Icons.edit),
                             color: Theme.of(context).accentColor,
-                          ),
-                          onTap: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (context) => JEntryScreen(
-                                  entry: snapshot.data[index],
+                            onPressed: () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) => JEntryScreen(
+                                    entry: snapshot.data[index],
+                                  ),
                                 ),
-                              ),
-                            );
-                          },
+                              );
+                            },
+                          ),
                         ),
                       );
                     },
@@ -112,56 +112,58 @@ class JournalScreen extends StatelessWidget {
 class TopBarJhome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      //margin: EdgeInsets.symmetric(vertical: 12, horizontal: 3),
-      height: 100,
-      decoration: BoxDecoration(
-        color: Theme.of(context).accentColor,
-        // borderRadius: BorderRadius.only(
-        //   bottomLeft: Radius.circular(20),
-        //   bottomRight: Radius.circular(20),
-        //   topLeft: Radius.circular(20),
-        //   topRight: Radius.circular(20),
-        // ),
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          Text(
-            'Journal List',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 24,
-              fontWeight: FontWeight.w600,
-              shadows: [
-                Shadow(
-                  // bottomLeft
-                  offset: Offset(-1, -1),
-                ),
-                Shadow(
-                  // bottomRight
-                  offset: Offset(1, -1),
-                ),
-                Shadow(
-                  // topRight
-                  offset: Offset(1, 1),
-                ),
-                Shadow(
-                  // topLeft
-                  offset: Offset(-1, 1),
-                ),
-              ],
-            ),
-          ),
-          // Text(
-          //   '${TEntryProvider().showTotalTasks()} Tasks',
-          //   //'Tasks',
-          //   style: TextStyle(
-          //     color: Theme.of(context).primaryColor,
-          //     fontSize: 12,
-          //   ),
+    return Card(
+      child: Container(
+        //margin: EdgeInsets.symmetric(vertical: 12, horizontal: 3),
+        height: 100,
+        decoration: BoxDecoration(
+          color: Colors.cyanAccent,
+          // borderRadius: BorderRadius.only(
+          //   bottomLeft: Radius.circular(20),
+          //   bottomRight: Radius.circular(20),
+          //   topLeft: Radius.circular(20),
+          //   topRight: Radius.circular(20),
           // ),
-        ],
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Text(
+              'Journal List',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 24,
+                fontWeight: FontWeight.w600,
+                shadows: [
+                  Shadow(
+                    // bottomLeft
+                    offset: Offset(-1, -1),
+                  ),
+                  Shadow(
+                    // bottomRight
+                    offset: Offset(1, -1),
+                  ),
+                  Shadow(
+                    // topRight
+                    offset: Offset(1, 1),
+                  ),
+                  Shadow(
+                    // topLeft
+                    offset: Offset(-1, 1),
+                  ),
+                ],
+              ),
+            ),
+            // Text(
+            //   '${TEntryProvider().showTotalTasks()} Tasks',
+            //   //'Tasks',
+            //   style: TextStyle(
+            //     color: Theme.of(context).primaryColor,
+            //     fontSize: 12,
+            //   ),
+            // ),
+          ],
+        ),
       ),
     );
   }

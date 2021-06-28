@@ -4,7 +4,6 @@ import 'package:journal_todo/providers/tasks_provider.dart';
 import 'package:journal_todo/providers/theme_provider.dart';
 import 'package:journal_todo/screens/journal_home.dart';
 import 'package:journal_todo/screens/tasks_home.dart';
-import 'package:journal_todo/utils/change_theme_switch.dart';
 import 'package:journal_todo/utils/drawer.dart';
 import 'package:journal_todo/utils/routes.dart';
 import 'package:provider/provider.dart';
@@ -43,9 +42,10 @@ class _AppState extends State<App> {
             home: Scaffold(
               appBar: AppBar(
                 title: Text('Todo Plus Journal App'),
-                actions: [
-                  ChangeThemeSwitch(),
-                ],
+                // actions: [
+                //   Icon(Icons.brightness_2),
+                //   ChangeThemeSwitch(),
+                // ],
               ),
               drawer: SafeArea(
                 child: CustomDrawer(),
@@ -63,15 +63,10 @@ class _AppState extends State<App> {
                   ),
                 ],
                 currentIndex: _selectedIndex,
-                selectedItemColor: Colors.cyan[800],
+                selectedItemColor: Colors.cyanAccent,
                 onTap: onBottomTap,
               ),
             ),
-            // theme: ThemeData(
-            //   accentColor: Colors.cyan[600],
-            //   primaryColor: Colors.cyan[800],
-            //   textTheme: GoogleFonts.patrickHandTextTheme(),
-            // ),
             theme: MyThemes.lightTheme,
             darkTheme: MyThemes.darkTheme,
             themeMode: themeProvider.themeMode,

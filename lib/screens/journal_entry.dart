@@ -134,7 +134,7 @@ class _JEntryScreenState extends State<JEntryScreen> {
                     'Save',
                   ),
                   style: ElevatedButton.styleFrom(
-                    primary: Theme.of(context).primaryColor,
+                    primary: Colors.cyanAccent,
                   ),
                   onPressed: () {
                     journalProvider.saveEntry();

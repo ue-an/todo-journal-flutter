@@ -14,19 +14,35 @@ class ThemeProvider extends ChangeNotifier {
 
 class MyThemes {
   static final darkTheme = ThemeData(
+    //primaryColor: Colors.cyanAccent,
+    //accentColor: Colors.cyanAccent,
+    primaryColorBrightness: Brightness.dark,
+    primaryColorLight: Colors.black,
+    primaryColorDark: Colors.black,
+    brightness: Brightness.dark,
+    indicatorColor: Colors.white,
+    appBarTheme: AppBarTheme(brightness: Brightness.dark),
     scaffoldBackgroundColor: Colors.grey[900],
-    colorScheme: ColorScheme.dark(),
-    accentColor: Colors.cyan[600],
-    primaryColor: Colors.cyan[800],
+    //colorScheme: ColorScheme.dark(),
+
     textTheme: GoogleFonts.patrickHandTextTheme(),
     cardColor: Colors.white70,
+    dividerColor: Colors.cyanAccent,
   );
 
   static final lightTheme = ThemeData(
+    primaryColor: Colors.cyan[600],
+    accentColor: Colors.cyanAccent,
+    primaryColorBrightness: Brightness.light,
+    brightness: Brightness.light,
+    primaryColorDark: Colors.white,
+    appBarTheme: AppBarTheme(brightness: Brightness.light),
+    //canvasColor: Colors.white70,
     scaffoldBackgroundColor: Colors.amber[100],
-    colorScheme: ColorScheme.light(),
-    accentColor: Colors.cyan[600],
-    primaryColor: Colors.cyan[800],
+    //colorScheme: ColorScheme.light(),
+
     textTheme: GoogleFonts.patrickHandTextTheme(),
+    cardColor: Colors.white,
+    dividerColor: Colors.black,
   );
 }
