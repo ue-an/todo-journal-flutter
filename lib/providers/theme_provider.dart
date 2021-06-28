@@ -31,7 +31,7 @@ class MyThemes {
   );
 
   static final lightTheme = ThemeData(
-    primaryColor: Colors.cyan[600],
+    primaryColor: Colors.cyanAccent,
     accentColor: Colors.cyanAccent,
     primaryColorBrightness: Brightness.light,
     brightness: Brightness.light,

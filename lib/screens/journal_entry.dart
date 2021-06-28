@@ -39,6 +39,7 @@ class _JEntryScreenState extends State<JEntryScreen> {
   Widget build(BuildContext context) {
     final journalProvider = Provider.of<JEntryProvider>(context);
     return Scaffold(
+      backgroundColor: Colors.brown[600],
       appBar: AppBar(
         //title: Text('Journal Entry'),
         title: Text(formatDate(journalProvider.date, [MM, ' ', d, ', ', yyyy])),
@@ -99,13 +100,13 @@ class _JEntryScreenState extends State<JEntryScreen> {
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(15.0),
                   borderSide: BorderSide(
-                    color: Colors.cyan[600],
+                    color: Colors.white,
                   ),
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(15.0),
                   borderSide: BorderSide(
-                    color: Colors.cyan[600],
+                    color: Colors.white,
                   ),
                 ),
                 contentPadding: EdgeInsets.symmetric(
@@ -113,10 +114,11 @@ class _JEntryScreenState extends State<JEntryScreen> {
                   horizontal: 20.0,
                 ),
                 labelText: 'Daily Journal Entry',
-                labelStyle: TextStyle(color: Colors.cyan[600]),
+                labelStyle:
+                    TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
               ),
               style: TextStyle(
-                color: Colors.cyan[600],
+                color: Colors.white,
               ),
               maxLines: 12,
               minLines: 10,
