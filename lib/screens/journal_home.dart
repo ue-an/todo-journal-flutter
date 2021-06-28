@@ -96,6 +96,7 @@ class JournalScreen extends StatelessWidget {
       floatingActionButton: Visibility(
         visible: _isVisible,
         child: FloatingActionButton(
+          backgroundColor: Colors.cyanAccent,
           child: Icon(
             Icons.add,
             color: Colors.white,
