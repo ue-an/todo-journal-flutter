@@ -235,7 +235,7 @@ class TaskScreen extends StatelessWidget {
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold),
                             ),
-                            style: TextStyle(color: Colors.cyan),
+                            style: TextStyle(color: Colors.white),
                             validator: (val) {
                               val = titleCtrl.text;
                               if (val.isEmpty)
@@ -273,7 +273,7 @@ class TaskScreen extends StatelessWidget {
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold),
                             ),
-                            style: TextStyle(color: Colors.cyan),
+                            style: TextStyle(color: Colors.white),
                             validator: (val) {
                               contentCtrl.text = val;
                               if (val.isEmpty)
