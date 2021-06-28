@@ -153,6 +153,7 @@ class TaskScreen extends StatelessWidget {
         ],
       ),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.cyanAccent,
         child: Icon(
           Icons.add,
           color: Colors.white,
