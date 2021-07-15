@@ -39,7 +39,6 @@ class _JEntryScreenState extends State<JEntryScreen> {
   Widget build(BuildContext context) {
     final journalProvider = Provider.of<JEntryProvider>(context);
     return Scaffold(
-      backgroundColor: Colors.brown[600],
       appBar: AppBar(
         //title: Text('Journal Entry'),
         title: Text(formatDate(journalProvider.date, [MM, ' ', d, ', ', yyyy])),

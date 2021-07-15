@@ -23,10 +23,9 @@ class MyThemes {
     indicatorColor: Colors.white,
     appBarTheme: AppBarTheme(brightness: Brightness.dark),
     scaffoldBackgroundColor: Colors.grey[900],
-    //colorScheme: ColorScheme.dark(),
 
     textTheme: GoogleFonts.patrickHandTextTheme(),
-    cardColor: Colors.white70,
+    cardColor: Colors.grey,
     dividerColor: Colors.cyanAccent,
   );
 
@@ -38,9 +37,7 @@ class MyThemes {
     primaryColorDark: Colors.white,
     appBarTheme: AppBarTheme(brightness: Brightness.light),
     canvasColor: Colors.cyan[800],
-    scaffoldBackgroundColor: Colors.amber[100],
-    //colorScheme: ColorScheme.light(),
-
+    scaffoldBackgroundColor: Colors.cyan[900],
     textTheme: GoogleFonts.patrickHandTextTheme(),
     cardColor: Colors.white,
     dividerColor: Colors.black,
