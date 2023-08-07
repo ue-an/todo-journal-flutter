@@ -1,16 +1,8 @@
-# journal_todo
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# To-Jo : Mobile Todo + Journal Flutter App 
+A simple app combining todo and journal functionalities.
+# Screenshots
+Mobile App:
+![todo-plus-journal-flutter-cover](https://github.com/ue-an/todo-journal/assets/68469141/5d2f0919-da04-4838-a554-6fbe2b44c0bc)
+<br>
+Firebase:
+![todo-plus-journal-database](https://github.com/ue-an/todo-journal/assets/68469141/c807a960-2120-43e6-b141-2e4487eb2755)
